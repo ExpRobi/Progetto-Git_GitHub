@@ -17,14 +17,15 @@ Il programma utilizza Python come linguaggio primario per eseguire il codice. Es
 ## Installazione
 
 <details>
-  <summary><strong>Clicca per l'installazione</strong></summary>
+  <summary><strong>Clicca per i requisiti</strong></summary>
 
   - Python 3.11 o maggiore
   - Git
   - Avere un account GitHub per utilizzare la repository
   
 </details>
-  
+
+Per installare basta clonare questa repo è poi avviare il file MAIN.PY con un qualsiasi editor compatibile con Python
 
 
 ## Autori
