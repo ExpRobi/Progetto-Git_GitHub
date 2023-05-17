@@ -1,4 +1,6 @@
 import os
+import datetime
+
 
 """ fare un programma in python che smista i rifiuti è i rifiuti smaltiti vengono salvati in un file in modalità (append) con timestamp della data corrente alla richiesta
 
@@ -13,5 +15,3 @@ import os
 
 
 """
-
-
