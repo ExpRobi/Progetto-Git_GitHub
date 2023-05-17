@@ -14,18 +14,20 @@ Il programma utilizza Python come linguaggio primario per eseguire il codice. Es
 
 
 
+## Installazione
 
-## Installation
+<details>
+  <summary><strong>Clicca per l'installazione</strong></summary>
 
-Per eseguire il codice bisogna aver installato 
-
-  - Python 3.11 =>
+  - Python 3.11 o maggiore
   - Git
-  - Avere un account GitHub per utilizzare la reposotory
+  - Avere un account GitHub per utilizzare la repository
+  
+</details>
   
 
 
-## Authors
+## Autori
 
 - [@ExpRobi](https://www.github.com/ExpRobi)
 - [@LocatelliNicholas06](https://www.github.com/LocatelliNicholas06)
