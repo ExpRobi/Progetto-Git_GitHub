@@ -47,7 +47,6 @@ Per eseguire il script / programma eseguire questo sulla propria macchina, trami
 
 ## Badges
 
-[![Version](https://img.shields.io/badge/Version-%201.0-red.svg)](https://opensource.org/licenses/)
+[![Version](https://img.shields.io/badge/Version-%201.0-red.svg)]([https://opensource.org/licenses/](https://github.com/ExpRobi/Progetto-Git_GitHub/))
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
