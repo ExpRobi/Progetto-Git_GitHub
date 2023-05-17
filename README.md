@@ -35,9 +35,19 @@ Per installare basta clonare questa repo è poi avviare il file MAIN.PY con un q
 - [@YoussefElmarzouki05](https://www.github.com/YoussefElmarzouki05)
 
 
+## Esecuzione
+
+Per eseguire il script / programma eseguire questo sulla propria macchina, tramite CMD o Editor
+
+```bash
+  python3 main.py
+        or
+  py main.py
+```
+
 ## Badges
 
+[![Version](https://img.shields.io/badge/Version-%201.0-red.svg)](https://opensource.org/licenses/)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
