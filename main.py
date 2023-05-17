@@ -106,5 +106,6 @@ while categoria not in categorie:
 
                     print(f"Il nome dell'oggetto '{oggetto}' è stato aggiunto al file '{file_categoria}'.")
                     break
+os.system('git commit -a')
     
 
