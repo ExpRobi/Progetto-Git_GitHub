@@ -19,9 +19,9 @@ Il programma utilizza Python come linguaggio primario per eseguire il codice. Es
 
 Per eseguire il codice bisogna aver installato 
 
-  Python 3.11 >
-  Git
-  Avere un account GitHub per utilizzare la reposotory
+  - Python 3.11 >
+  - Git
+  - Avere un account GitHub per utilizzare la reposotory
   
 
 
