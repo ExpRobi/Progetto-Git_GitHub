@@ -1,6 +1,9 @@
-import os
 
-""" fare un programma in python che smista i rifiuti è i rifiuti smaltiti vengono salvati in un file in modalità (append) con timestamp della data corrente alla richiesta
+# Programma di Smistamento Rifiuti
+
+Il programma utilizza Python come linguaggio primario per eseguire il codice. Esso suddivide in diverse categorie i rifiuti:
+
+
 
     R1-Grande bianco freddo -grandi elettrodomestici per la refrigerazione: frigoriferi, congelatori, condizionatori
     R2-Grande bianco non freddo -grandi elettrodomestici come lavatrici, lavastoviglie.
@@ -9,9 +12,16 @@ import os
     R5-Sorgenti luminose a scarica: lampade fluorescenti e sorgenti luminose compatte.
 
 
-    il programma deve mandare ogni fine aggiunta del rifiuto il file Rifiuti[QUI LA CATEGORIA DEL RIFIUTO] e deve metterlo nella reposotory "Progetto-Git_GitHub"
 
 
-"""
 
+## Installation
 
+Per eseguire il codice bisogna aver installato 
+
+  Python 3.11 >
+  Git
+  Avere un account GitHub per utilizzare la reposotory
+  
+
+    
