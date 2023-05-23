@@ -55,6 +55,6 @@ Per eseguire il script / programma eseguire questo sulla propria macchina, trami
 
 ## Badges
 
-[![Version](https://img.shields.io/badge/Version-%201.0-red.svg)](https://github.com/ExpRobi/Progetto-Git_GitHub)
+[![Version](https://img.shields.io/badge/Version-%202.0-red.svg)](https://github.com/ExpRobi/Progetto-Git_GitHub)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
