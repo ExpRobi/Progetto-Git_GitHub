@@ -41,7 +41,9 @@ Per eseguire il script / programma eseguire questo sulla propria macchina, trami
 
 ```bash
   python3 main.py
+  ```
         or
+```bash
   py main.py
 ```
 
@@ -49,7 +51,9 @@ Per eseguire il script / programma eseguire questo sulla propria macchina, trami
 
 ```bash
   python3 script_con_gui.py
+  ```
         or
+```bash
   py script_con_gui.py
 ```
 
