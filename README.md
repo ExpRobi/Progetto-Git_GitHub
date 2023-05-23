@@ -53,7 +53,7 @@ Per eseguire il script / programma eseguire questo sulla propria macchina, trami
 ```bash
   python3 script_con_gui.py
   ```
-        or
+OPPURE
 ```bash
   py script_con_gui.py
 ```
