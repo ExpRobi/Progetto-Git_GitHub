@@ -45,6 +45,14 @@ Per eseguire il script / programma eseguire questo sulla propria macchina, trami
   py main.py
 ```
 
+Per eseguire il script / programma eseguire questo sulla propria macchina, tramite CMD o Editor con la GUI
+
+```bash
+  python3 script_con_gui.py
+        or
+  py script_con_gui.py
+```
+
 ## Badges
 
 [![Version](https://img.shields.io/badge/Version-%201.0-red.svg)](https://github.com/ExpRobi/Progetto-Git_GitHub)
