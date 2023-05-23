@@ -42,7 +42,8 @@ Per eseguire il script / programma eseguire questo sulla propria macchina, trami
 ```bash
   python3 main.py
   ```
-        or
+OPPURE
+
 ```bash
   py main.py
 ```
