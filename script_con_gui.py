@@ -2,7 +2,6 @@ import os
 import os.path
 import tkinter as tk
 from tkinter import messagebox, simpledialog
-import keyboard
 import getpass
 
 def controlla_categorie(oggetto):
