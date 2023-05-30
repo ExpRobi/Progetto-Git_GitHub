@@ -22,7 +22,7 @@ Il programma utilizza Python come linguaggio primario per eseguire il codice. Es
   - Python 3.11 o maggiore
   - Un Editor
     - compatibilità con python
-    - [Visual Studio Code]([https://link-url-here.org](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user))
+    - [Visual Studio Code]([https://link-url-here.org](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user)
   - Tutti i file scaricati dalla reposotory
   
 </details>
