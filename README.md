@@ -20,8 +20,9 @@ Il programma utilizza Python come linguaggio primario per eseguire il codice. Es
   <summary><strong>Clicca per i requisiti</strong></summary>
 
   - Python 3.11 o maggiore
-  - Git
-  - Avere un account GitHub per utilizzare la repository
+  - Un Editor
+    - compatibilità con python
+  - Tutti i file scaricati dalla reposotory
   
 </details>
 
