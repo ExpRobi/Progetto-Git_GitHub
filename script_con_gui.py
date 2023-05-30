@@ -2,7 +2,7 @@ import os
 import os.path
 import tkinter as tk
 
-def controlla_oggetto_in_categorie(oggetto):
+def controlla_categorie(oggetto):
     categorie = ["R1", "R2", "R3", "R4", "R5"]
     presente = False
 
@@ -15,14 +15,16 @@ def controlla_oggetto_in_categorie(oggetto):
                 if oggetto.upper() in righe_pulite and oggetto != "":
                     risultato_label.config(text=f"L'oggetto '{oggetto}' deve essere buttato nella categoria '{categoria}'.", foreground="green")
                     presente = True
+                    x = open('lista.txt', 'a')
+                    x.writelines(f"{oggetto.upper()}, {categoria}\n")
 
     if not presente:
         risultato_label.config(text=f"L'oggetto '{oggetto}' non è presente in nessuna categoria.", foreground="red")
 
 
-def lancia_controlla_oggetto():
+def controlla_oggetto():
     oggetto = oggetto_entry.get()
-    controlla_oggetto_in_categorie(oggetto)
+    controlla_categorie(oggetto)
 
 root = tk.Tk()
 root.title("Controllo Rifiuti")
@@ -33,7 +35,7 @@ oggetto_label.pack()
 oggetto_entry = tk.Entry(root)
 oggetto_entry.pack()
 
-controlla_button = tk.Button(root, text="Controlla", command=lancia_controlla_oggetto)
+controlla_button = tk.Button(root, text="Controlla", command=controlla_oggetto)
 controlla_button.pack()
 
 risultato_label = tk.Label(root)
