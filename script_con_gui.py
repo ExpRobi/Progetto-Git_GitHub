@@ -2,9 +2,11 @@ import os
 import os.path
 import tkinter as tk
 from tkinter import messagebox, simpledialog
-import keyboard
 import getpass
+from functools import partial
 from datetime import datetime
+oggetto_entry = None
+
 
 def controlla_categorie(oggetto):
     categorie = ["R1", "R2", "R3", "R4", "R5"]
@@ -23,7 +25,7 @@ def controlla_categorie(oggetto):
                     x.writelines(f"oggetto = {oggetto.upper()}, categoria = {categoria}, data di inserimento dell'oggetto = {datetime.today()}\n")
                     controlla_button.config(state="disabled")  # Disabilita il pulsante "Controlla"
                     oggetto_entry.config(state="disabled")  # Disabilita l'entry widget
-                    root.after(10000, abilita_controlla)
+                    root.after(5000, abilita_controlla)
                     break  # Esci dal ciclo se l'oggetto è stato trovato
 
     if not presente:
@@ -51,6 +53,9 @@ def leggi_nome_utente():
             nome_utente = file.read()
     return nome_utente
 
+def set_focus(widget):
+    widget.focus_set()
+
 def mostra_dialogo_benvenuto():
     nome_utente = leggi_nome_utente()
 
@@ -60,14 +65,16 @@ def mostra_dialogo_benvenuto():
         risposta = messagebox.askyesno("Conferma", "È il tuo nome?")
         if risposta:
             nome_utente = nome_pc
-            salva_nome_utente(nome_utente)
         else:
             nome_utente = simpledialog.askstring("Inserisci il tuo nome", "Inserisci il tuo nome:")
             salva_nome_utente(nome_utente)
     else:
         messagebox.showinfo("Benvenuto", f"Ciao, {nome_utente}!")
 
+    root.after(0, lambda: set_focus(oggetto_entry))
+
     return nome_utente
+
 
 root = tk.Tk()
 root.title("Controllo Rifiuti")
@@ -77,7 +84,7 @@ logo_path = "logo.png"
 
 # Carica l'immagine del logo
 logo_image = tk.PhotoImage(file=logo_path)
-logo_image = logo_image.subsample(2)  # Ridimensiona l'immagine del logo
+logo_image = logo_image.subsample(2)  # Ridimensiona l'immagine del logo (fattore di sottocampionamento 2)
 
 # Crea una label per visualizzare il logo
 logo_label = tk.Label(root, image=logo_image)
@@ -91,6 +98,8 @@ oggetto_label.pack()
 oggetto_entry = tk.Entry(root)
 oggetto_entry.pack()
 oggetto_entry.bind('<Return>', controlla_oggetto)
+
+oggetto_entry.focus()  # Imposta il focus sull'entry widget
 
 controlla_button = tk.Button(root, text="Controlla", command=controlla_oggetto)
 controlla_button.pack()
