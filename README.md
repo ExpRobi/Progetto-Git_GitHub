@@ -20,8 +20,9 @@ Il programma utilizza Python come linguaggio primario per eseguire il codice. Es
   <summary><strong>Clicca per i requisiti</strong></summary>
 
   - Python 3.11 o maggiore
-  - Un Editor (consigliato [Visual Studio Code]([https://link-url-here.org](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user)))
+  - Un Editor
     - compatibilità con python
+    - [Visual Studio Code]([https://link-url-here.org](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user))
   - Tutti i file scaricati dalla reposotory
   
 </details>
