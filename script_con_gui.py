@@ -22,11 +22,11 @@ def controlla_categorie(oggetto):
         risultato_label.config(text=f"L'oggetto '{oggetto}' non è presente in nessuna categoria.", foreground="red")
 
 
-def controlla_oggetto():
+def controlla_oggetto(event=None):
     oggetto = oggetto_entry.get()
     controlla_categorie(oggetto)
 
-root = tk.Tk()
+root = tk.Tk()      
 root.title("Controllo Rifiuti")
 
 oggetto_label = tk.Label(root, text="Inserisci il nome dell'oggetto da rifiutare:")
@@ -34,6 +34,7 @@ oggetto_label.pack()
 
 oggetto_entry = tk.Entry(root)
 oggetto_entry.pack()
+oggetto_entry.bind('<Return>', controlla_oggetto)
 
 controlla_button = tk.Button(root, text="Controlla", command=controlla_oggetto)
 controlla_button.pack()
