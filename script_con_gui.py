@@ -48,9 +48,8 @@ def salva_nome_utente(nome_utente):
 
 def leggi_nome_utente():
     nome_utente = ""
-    if os.path.isfile("nome_utente.txt"):
-        with open("nome_utente.txt", "r") as file:
-            nome_utente = file.read()
+    file = open("nome_utente.txt", 'r')
+    nome_utente = file.readline()
     return nome_utente
 
 def set_focus(widget):
@@ -60,8 +59,8 @@ def mostra_dialogo_benvenuto():
     nome_utente = leggi_nome_utente()
 
     if nome_utente == "":
-        nome_pc = getpass.getuser()
-        messagebox.showinfo("Benvenuto", f"Ciao Utente ({nome_pc}), è la prima volta che utilizzi il programma?")
+        nome_pc = ""
+        messagebox.showinfo("Benvenuto", f"Ciao ({getpass.getuser()}), è la prima volta che utilizzi il programma?")
         risposta = messagebox.askyesno("Conferma", "È il tuo nome?")
         if risposta:
             nome_utente = nome_pc
@@ -69,7 +68,8 @@ def mostra_dialogo_benvenuto():
             nome_utente = simpledialog.askstring("Inserisci il tuo nome", "Inserisci il tuo nome:")
             salva_nome_utente(nome_utente)
     else:
-        messagebox.showinfo("Benvenuto", f"Ciao, {nome_utente}!")
+        messagebox.showinfo("Benvenuto", f"Ciao {nome_utente},")
+        risposta = messagebox.askyesno("Conferma", "È la prima volta che usi il programma?")
 
     root.after(0, lambda: set_focus(oggetto_entry))
 
