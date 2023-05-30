@@ -6,6 +6,7 @@ from tkinter import messagebox
 def controlla_categorie(oggetto):
     categorie = ["R1", "R2", "R3", "R4", "R5"]
     presente = False
+
     for categoria in categorie:
         file_categoria = categoria + ".txt"
         if os.path.isfile(file_categoria):
@@ -21,6 +22,7 @@ def controlla_categorie(oggetto):
                     oggetto_entry.config(state="disabled")  # Disabilita l'entry widget
                     root.after(5000, abilita_controlla)
                     break  # Esci dal ciclo se l'oggetto è stato trovato
+
     if not presente:
         risultato_label.config(text=f"L'oggetto '{oggetto}' non è presente in nessuna categoria.", foreground="red")
 
@@ -32,23 +34,36 @@ def controlla_oggetto(event=None):
     oggetto = oggetto_entry.get()
     controlla_categorie(oggetto)
 
+def chiudi_programma(event):
+    root.quit()
+
 root = tk.Tk()
 root.title("Controllo Rifiuti")
+
 # Inserisci il percorso completo dell'immagine del tuo logo o assicurati che sia nella stessa directory del file Python
 logo_path = "logo.png"
+
 # Carica l'immagine del logo
 logo_image = tk.PhotoImage(file=logo_path)
 logo_image = logo_image.subsample(2)  # Ridimensiona l'immagine del logo (fattore di sottocampionamento 2)
+
 # Crea una label per visualizzare il logo
 logo_label = tk.Label(root, image=logo_image)
 logo_label.pack()
+
 oggetto_label = tk.Label(root, text="Inserisci il nome dell'oggetto da rifiutare:")
 oggetto_label.pack()
+
 oggetto_entry = tk.Entry(root)
 oggetto_entry.pack()
 oggetto_entry.bind('<Return>', controlla_oggetto)
+
 controlla_button = tk.Button(root, text="Controlla", command=controlla_oggetto)
 controlla_button.pack()
+
 risultato_label = tk.Label(root)
 risultato_label.pack()
+
+root.bind('<Control-w>', chiudi_programma)  # Rileva la combinazione di tasti Ctrl+W per chiudere il programma
+
 root.mainloop()
