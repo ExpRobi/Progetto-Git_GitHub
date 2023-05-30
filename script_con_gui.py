@@ -2,7 +2,9 @@ import os
 import os.path
 import tkinter as tk
 from tkinter import messagebox, simpledialog
+import keyboard
 import getpass
+from datetime import datetime
 
 def controlla_categorie(oggetto):
     categorie = ["R1", "R2", "R3", "R4", "R5"]
@@ -18,7 +20,7 @@ def controlla_categorie(oggetto):
                     risultato_label.config(text=f"L'oggetto '{oggetto}' deve essere buttato nella categoria '{categoria}'.", foreground="green")
                     presente = True
                     x = open('lista.txt', 'a')
-                    x.writelines(f"{oggetto.upper()}, {categoria}\n")
+                    x.writelines(f"{oggetto.upper()}, {categoria}, {datetime.today()}\n")
                     controlla_button.config(state="disabled")  # Disabilita il pulsante "Controlla"
                     oggetto_entry.config(state="disabled")  # Disabilita l'entry widget
                     root.after(10000, abilita_controlla)
