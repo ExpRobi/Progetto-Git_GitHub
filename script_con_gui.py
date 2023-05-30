@@ -20,7 +20,7 @@ def controlla_categorie(oggetto):
                     risultato_label.config(text=f"L'oggetto '{oggetto}' deve essere buttato nella categoria '{categoria}'.", foreground="green")
                     presente = True
                     x = open('lista.txt', 'a')
-                    x.writelines(f"{oggetto.upper()}, {categoria}, {datetime.today()}\n")
+                    x.writelines(f"oggetto = {oggetto.upper()}, categoria = {categoria}, data di inserimento dell'oggetto = {datetime.today()}\n")
                     controlla_button.config(state="disabled")  # Disabilita il pulsante "Controlla"
                     oggetto_entry.config(state="disabled")  # Disabilita l'entry widget
                     root.after(10000, abilita_controlla)
