@@ -1,3 +1,4 @@
+# Dichiarazione Librerie # 
 import os
 import os.path
 import tkinter as tk
@@ -30,7 +31,7 @@ def controlla_categorie(oggetto):
                     break  # Esci dal ciclo se l'oggetto è stato trovato
 
     if not presente:
-        risultato_label.config(text=f"L'oggetto '{oggetto}' non è presente in nessuna categoria.", foreground="red")
+        risultato_label.config(text=f"L'oggetto '{oggetto}' non è presente in nessuna categoria.", foreground="red") # Messaggio di errore
 
 def abilita_controlla():
     controlla_button.config(state="normal")  # Riabilita il pulsante "Controlla"
@@ -43,13 +44,13 @@ def controlla_oggetto(event=None):
 def chiudi_programma(event):
     root.quit()
 
-def salva_nome_utente(nome_utente):
-    with open("user.rsse", "w") as file:
+def salva_nome_utente(nome_utente): # Creazione file del programma per salvare il nome utente
+    with open("user.raee_exri", "w") as file:
         file.write(nome_utente)
 
-def leggi_nome_utente():
+def leggi_nome_utente(): # Lettura dal file di programma per vedere il nome utente
     nome_utente = ""
-    file = open("user.rsse", 'r')
+    file = open("user.raee_exri", 'r')
     nome_utente = file.readline()
     return nome_utente
 
@@ -60,19 +61,23 @@ def mostra_dialogo_benvenuto():
     nome_utente = leggi_nome_utente()
 
     if nome_utente == "":
-        messagebox.showinfo("Benvenuto", f"Ciao ({getpass.getuser()}), è la prima volta che utilizzi il programma?")
+        prima_volta = messagebox.askyesno("Benvenuto", f"Ciao ({getpass.getuser()}), è la prima volta che utilizzi il programma?")
+        if prima_volta:
+            webbrowser.open("https://github.com/ExpRobi/Progetto-Git_GitHub/tree/main#usage") #Apertura file README con le informazioni
+        else:
+            print()
         risposta = messagebox.askyesno("Conferma", "È il tuo nome?")
         if risposta:
-            nome_utente = getpass.getuser()
+            nome_utente = getpass.getuser() # Prendiamo il nome utente del pc
             salva_nome_utente(nome_utente)
         else:
-            nome_utente = simpledialog.askstring("Inserisci il tuo nome", "Inserisci il tuo nome:")
+            nome_utente = simpledialog.askstring("Inserisci il tuo nome", "Inserisci il tuo nome:") # Chiediamo il nome utente
             salva_nome_utente(nome_utente)
     else:
         messagebox.showinfo("Benvenuto", f"Ciao {nome_utente},")
-        risposta = messagebox.askyesno("Conferma", "È la prima volta che usi il programma?")
+        risposta = messagebox.askyesno("Conferma", "È la prima volta che usi il programma?") #Chiediamo se è la prima volta che usi il programma
         if risposta:
-            webbrowser.open("https://github.com/ExpRobi/Progetto-Git_GitHub/tree/main#usage")
+            webbrowser.open("https://github.com/ExpRobi/Progetto-Git_GitHub/tree/main#usage") #Apertura file README con le informazioni
         else:
             print()
 
@@ -100,17 +105,21 @@ nome_utente = mostra_dialogo_benvenuto()
 oggetto_label = tk.Label(root, text="Inserisci il nome dell'oggetto da rifiutare:")
 oggetto_label.pack()
 
+# Inizializziamo il tasto invio per inviare il oggetto
+
 oggetto_entry = tk.Entry(root)
 oggetto_entry.pack()
 oggetto_entry.bind('<Return>', controlla_oggetto)
 
 oggetto_entry.focus()  # Imposta il focus sull'entry widget
 
-controlla_button = tk.Button(root, text="Controlla", command=controlla_oggetto)
+controlla_button = tk.Button(root, text="Controlla", command=controlla_oggetto) # Creazione tasto conferma
 controlla_button.pack()
 
 risultato_label = tk.Label(root)
 risultato_label.pack()
+
+# Inizializziamo il tasto CONTROL-W per chiudere il programma 
 
 root.bind('<Control-w>', chiudi_programma)  # Rileva la combinazione di tasti Ctrl+W per chiudere il programma
 
