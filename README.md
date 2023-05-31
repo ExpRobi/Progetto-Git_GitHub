@@ -59,6 +59,10 @@ OPPURE
   py script_con_gui.py
 ```
 
+## Usage
+
+Dopo aver aperto il programma bisogna inserire il oggetto da rifiutare e automaticamente il programma ti dirà la categoria del rifiuto
+
 ## Badges
 
 [![Version](https://img.shields.io/badge/Version-%202.1-red.svg)](https://github.com/ExpRobi/Progetto-Git_GitHub)
