@@ -65,6 +65,6 @@ Dopo aver aperto il programma bisogna inserire il oggetto da rifiutare e automat
 
 ## Badges
 
-[![Version](https://img.shields.io/badge/Version-%202.1-red.svg)](https://github.com/ExpRobi/Progetto-Git_GitHub)
+[![Version](https://img.shields.io/badge/Version-%203.0-red.svg)](https://github.com/ExpRobi/Progetto-Git_GitHub)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
