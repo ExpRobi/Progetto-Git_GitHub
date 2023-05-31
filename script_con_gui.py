@@ -3,6 +3,7 @@ import os.path
 import tkinter as tk
 from tkinter import messagebox, simpledialog
 import getpass
+import webbrowser
 from functools import partial
 from datetime import datetime
 oggetto_entry = None
@@ -43,12 +44,12 @@ def chiudi_programma(event):
     root.quit()
 
 def salva_nome_utente(nome_utente):
-    with open("nome_utente.txt", "w") as file:
+    with open("user.rsse", "w") as file:
         file.write(nome_utente)
 
 def leggi_nome_utente():
     nome_utente = ""
-    file = open("nome_utente.txt", 'r')
+    file = open("user.rsse", 'r')
     nome_utente = file.readline()
     return nome_utente
 
@@ -59,17 +60,21 @@ def mostra_dialogo_benvenuto():
     nome_utente = leggi_nome_utente()
 
     if nome_utente == "":
-        nome_pc = ""
         messagebox.showinfo("Benvenuto", f"Ciao ({getpass.getuser()}), è la prima volta che utilizzi il programma?")
         risposta = messagebox.askyesno("Conferma", "È il tuo nome?")
         if risposta:
-            nome_utente = nome_pc
+            nome_utente = getpass.getuser()
+            salva_nome_utente(nome_utente)
         else:
             nome_utente = simpledialog.askstring("Inserisci il tuo nome", "Inserisci il tuo nome:")
             salva_nome_utente(nome_utente)
     else:
         messagebox.showinfo("Benvenuto", f"Ciao {nome_utente},")
         risposta = messagebox.askyesno("Conferma", "È la prima volta che usi il programma?")
+        if risposta:
+            webbrowser.open("https://github.com/ExpRobi/Progetto-Git_GitHub/tree/main#usage")
+        else:
+            print()
 
     root.after(0, lambda: set_focus(oggetto_entry))
 
