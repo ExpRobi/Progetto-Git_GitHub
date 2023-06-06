@@ -12,8 +12,6 @@ Il programma utilizza Python come linguaggio primario per eseguire il codice. Es
     R5-Sorgenti luminose a scarica: lampade fluorescenti e sorgenti luminose compatte.
 
 
-COAP
-
 ## Installazione
 
 <details>
